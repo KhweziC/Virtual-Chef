@@ -4,25 +4,24 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'signup',
     pathMatch: 'full'
   },
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
-<<<<<<< HEAD
   
-=======
->>>>>>> 195efd9fbe0dae3e38a143e62060db6913aa8e5e
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'favourite', loadChildren: './favourite/favourite.module#FavouritePageModule' },
   { path: 'settings', loadChildren: './settings/settings.module#SettingsPageModule' },
   { path: 'ingredients', loadChildren: './ingredients/ingredients.module#IngredientsPageModule' },
-  { path: 'recipes', loadChildren: './recipes/recipes.module#RecipesPageModule' }
+  { path: 'recipes', loadChildren: './recipes/recipes.module#RecipesPageModule' },
+  { path: 'signup', loadChildren: './signup/signup.module#SignupPageModule' }
 
 
-];
+
+]
 
 @NgModule({
   imports: [

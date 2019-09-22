@@ -6,4 +6,24 @@
 
 <ion-content>
 
+  <ion-item>
+    <ion-label position="stacked">First Name </ion-label>
+    <ion-input required type="text" oninput="handleFirstNameValue(event)"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Last Name </ion-label>
+    <ion-input required type="text" oninput="handleLastNameValue(event)"></ion-input>
+  </ion-item>
+  
+  <ion-item> 
+     <ion-label>Remember me</ion-label> 
+    <ion-checkbox slot="end"> </ion-checkbox>
+  </ion-item>
+  
+  <ion-buttons>
+    <ion-button fill="outline"> 
+      Login
+    </ion-button>
+  </ion-buttons>
 </ion-content>

@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>signup</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <ion-label position="stacked">First Name </ion-label>
+        <ion-input required type="text" oninput="handleFirstNameValue(event)"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label position="stacked">Last Name </ion-label>
+        <ion-input required type="text" oninput="handleLastNameValue(event)"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label>Male</ion-label>
+          <ion-checkbox slot="start"></ion-checkbox>
+          <ion-label>Female</ion-label>
+          <ion-checkbox slot="end"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Age</ion-label>
+            <ion-select>
+              <ion-select-option>1989</ion-select-option>
+              <ion-select-option>1990</ion-select-option>
+              <ion-select-option>1991</ion-select-option>
+              <ion-select-option>1992</ion-select-option>
+              <ion-select-option>1993</ion-select-option>
+              <ion-select-option>1994</ion-select-option>
+              <ion-select-option>1995</ion-select-option>
+              <ion-select-option>1996</ion-select-option>
+              <ion-select-option>1997</ion-select-option>
+              <ion-select-option>1998</ion-select-option>
+              <ion-select-option>1999</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+                <ion-label position="stacked">Email </ion-label>
+                <ion-input required type="text" oninput="AgeValue(event)"></ion-input>
+            </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">Enter Password </ion-label>
+                    <ion-input required type="text" oninput="AgeValue(event)"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label position="stacked">Re-enter Password </ion-label>
+                        <ion-input required type="text" oninput="AgeValue(event)"></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>T&C</ion-label>
+                            <ion-checkbox slot="start"></ion-checkbox>
+                            </ion-item>
+                            <ion-buttons>
+                                <ion-button fill="outline"> 
+                                  Register
+                                </ion-button>
+                              </ion-buttons>
+
+
+</ion-content>
