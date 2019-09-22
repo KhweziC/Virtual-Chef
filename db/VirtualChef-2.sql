@@ -14,11 +14,9 @@ CREATE TABLE [Restaurants]
  [RestaurantName] nvarchar(50) NOT NULL ,
  [Address]        nvarchar(250) NOT NULL ,
  [GPSCoordinate]  nvarchar(50) NOT NULL ,
- [MenuId]         int NOT NULL ,
 
 
- CONSTRAINT [PK_Restaurant] PRIMARY KEY CLUSTERED ([RestaurantId] ASC),
- CONSTRAINT [FK_Menu_To_Restaurants] FOREIGN KEY ([MenuId])  REFERENCES [dbo].[Menu]([MenuId])
+ CONSTRAINT [PK_Restaurant] PRIMARY KEY CLUSTERED ([RestaurantId] ASC)
 );
 GO
 
@@ -34,7 +32,7 @@ GO
 -- ************************************** [Diet]
 
 IF NOT EXISTS (SELECT * FROM sys.tables t WHERE t.name='Diet')
-CREATE TABLE [Restaurants]
+CREATE TABLE [Diet]
 (
  [DietId]   int IDENTITY (1, 1) NOT NULL ,
  [DietName] nvarchar(50) NOT NULL 

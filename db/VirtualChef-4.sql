@@ -61,22 +61,15 @@ CREATE TABLE [dbo].[Cook]
  [IngredientId] int NOT NULL ,
  [Quantity]     decimal(2,0) NOT NULL ,
  [Measurement]  nvarchar(50) NOT NULL ,
- [RecipeId_1]   int NOT NULL ,
 
 
  CONSTRAINT [PK_Cook] PRIMARY KEY CLUSTERED ([RecipeId] ASC, [IngredientId] ASC),
- CONSTRAINT [FK_233] FOREIGN KEY ([RecipeId_1])  REFERENCES [dbo].[Recipes]([RecipeId]),
+ CONSTRAINT [FK_Recipe] FOREIGN KEY ([RecipeId])  REFERENCES [dbo].[Recipes]([RecipeId]),
  CONSTRAINT [FK_Ingredients_To_Cook] FOREIGN KEY ([IngredientId])  REFERENCES [dbo].[Ingredients]([IngredientId])
 );
 GO
 
 
-CREATE NONCLUSTERED INDEX [fkIdx_233] ON [dbo].[Cook] 
- (
-  [RecipeId_1] ASC
- )
-
-GO
 
 CREATE NONCLUSTERED INDEX [fkIdx_IngredientId] ON [dbo].[Cook] 
  (
@@ -94,7 +87,9 @@ GO
 
 
 -- ************************************** [dbo].[Cook]
-
+DROP TABLE IF EXISTS [dbo].[MenuRecipes];
+GO
+ 
 IF NOT EXISTS (SELECT * FROM sys.tables t join sys.schemas s ON (t.schema_id = s.schema_id) WHERE s.name='dbo' and t.name='MenuRecipes')
 CREATE TABLE [dbo].[MenuRecipes]
 (
@@ -104,7 +99,7 @@ CREATE TABLE [dbo].[MenuRecipes]
 
  CONSTRAINT [PK_MenuRecipe] PRIMARY KEY CLUSTERED ([RecipeId] ASC, [MenuId] ASC),
  CONSTRAINT [FK_To_Recipe] FOREIGN KEY ([RecipeId])  REFERENCES [dbo].[Recipes]([RecipeId]),
- CONSTRAINT [FK_To_Menu] FOREIGN KEY ([IngredientId])  REFERENCES [dbo].[Menu]([MenuId])
+ CONSTRAINT [FK_To_Menu] FOREIGN KEY ([MenuId])  REFERENCES [dbo].[Menu]([MenuId])
 );
 GO
 
