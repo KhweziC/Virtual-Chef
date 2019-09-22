@@ -16,15 +16,15 @@ namespace VirtualChefApi.Controllers
 
             new Ingredient()
             {
-            IngrediantId = 15343, IngrediantName = "Tomato", Nutritions = "alot"
+            IngredientId = 15343, IngredientName = "Tomato", Nutritions = "alot"
             },
             new Ingredient()
             {
-            IngrediantId = 15444, IngrediantName = "Lettuce", Nutritions = "alot"
+            IngredientId = 15444, IngredientName = "Lettuce", Nutritions = "alot"
             },
             new Ingredient()
             {
-            IngrediantId = 14353, IngrediantName = "Potato", Nutritions = "alot"
+            IngredientId = 14353, IngredientName = "Potato", Nutritions = "alot"
             }
             };
 
@@ -32,25 +32,27 @@ namespace VirtualChefApi.Controllers
         // GET api/ingrediant/15343
         public IEnumerable<Ingredient> Get()
         {
-            return list;
+            var ctx = new VirtualChefContext();
+            var ingredients =(from cat in ctx.Ingredients select cat).ToList();
+            return ingredients;
         }
         // GET api/ingrediant/15343
         public Ingredient Get(int id)
         {
-            return list.First(e => e.IngrediantId == id);
+            return list.First(e => e.IngredientId == id);
         }
 
         // POST api/ingrediant/15343
         public void Post(Ingredient ingredient)
         {
-            int maxId = list.Max(e => e.IngrediantId);
-            ingredient.IngrediantId = maxId + 1;
+            int maxId = list.Max(e => e.IngredientId);
+            ingredient.IngredientId = maxId + 1;
             list.Add(ingredient);
         }
         // PUT api/ingrediant/15343
         public void Put(int id, Ingredient ingredient)
         {
-            int index = list.ToList().FindIndex(e => e.IngrediantId == id);
+            int index = list.ToList().FindIndex(e => e.IngredientId == id);
             list[index] = ingredient;
         }
         // DELETE api/ingrediant/15343
