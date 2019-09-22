@@ -1,63 +1,48 @@
 -- ****************** SqlDBM: Microsoft SQL Server ******************
 -- ******************************************************************
 
-DROP TABLE [dbo].[MC];
+DROP TABLE IF EXISTS [Restaurants];
 GO
 
 
-DROP TABLE [dbo].[Countries];
-GO
+-- ************************************** [Restaurants]
 
-
--- ************************************** [dbo].[Countries]
-
-CREATE TABLE [dbo].[Countries]
+IF NOT EXISTS (SELECT * FROM sys.tables t WHERE t.name='Restaurants')
+CREATE TABLE [Restaurants]
 (
- [CountryId]   nvarchar(3) NOT NULL ,
- [CountryName] nvarchar(50) NOT NULL ,
+ [RestaurantId]   int IDENTITY (1, 1) NOT NULL ,
+ [RestaurantName] nvarchar(50) NOT NULL ,
+ [Address]        nvarchar(250) NOT NULL ,
+ [GPSCoordinate]  nvarchar(50) NOT NULL ,
+ [MenuId]         int NOT NULL ,
 
 
- CONSTRAINT [PK_Country] PRIMARY KEY CLUSTERED ([CountryId] ASC)
+ CONSTRAINT [PK_Restaurant] PRIMARY KEY CLUSTERED ([RestaurantId] ASC),
+ CONSTRAINT [FK_Menu_To_Restaurants] FOREIGN KEY ([MenuId])  REFERENCES [dbo].[Menu]([MenuId])
 );
 GO
 
 
-
-
-
-
-
-
--- ************************************** [dbo].[MC]
-
-CREATE TABLE [dbo].[MC]
-(
- [MenuId]     int NOT NULL ,
- [CategoryId] int NOT NULL ,
-
-
- CONSTRAINT [FK_216] FOREIGN KEY ([MenuId])  REFERENCES [dbo].[Menu]([MenuId]),
- CONSTRAINT [FK_219] FOREIGN KEY ([CategoryId])  REFERENCES [dbo].[Categories]([CategoryId])
-);
-GO
-
-
-CREATE NONCLUSTERED INDEX [fkIdx_216] ON [dbo].[MC] 
+CREATE NONCLUSTERED INDEX [fkIdx_MenuId] ON [Restaurants] 
  (
   [MenuId] ASC
  )
 
 GO
 
-CREATE NONCLUSTERED INDEX [fkIdx_219] ON [dbo].[MC] 
- (
-  [CategoryId] ASC
- )
 
+-- ************************************** [Diet]
+
+IF NOT EXISTS (SELECT * FROM sys.tables t WHERE t.name='Diet')
+CREATE TABLE [Restaurants]
+(
+ [DietId]   int IDENTITY (1, 1) NOT NULL ,
+ [DietName] nvarchar(50) NOT NULL 
+
+
+ CONSTRAINT [PK_Diet] PRIMARY KEY CLUSTERED ([DietId] ASC),
+);
 GO
-
-
-
 
 
 

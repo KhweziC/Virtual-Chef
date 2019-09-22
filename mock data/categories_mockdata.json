@@ -1,0 +1,38 @@
+[
+  {
+    "CategoryId": 1,
+    "CategoryName": "Fruits",
+    "Description": "This is for fruits",
+    "ImageURL": "https://cdn.shopify.com/s/files/1/0018/8327/5325/products/extra-large-fruit-basket-17808120902_1024x1024_65bf56f6-2c03-499c-99a7-abc237641f14_1024x1024.jpg?v=1528874366"
+  },
+  {
+    "CategoryId": 2,
+    "CategoryName": "Vegatables",
+    "Description": "This is for veggies",
+    "ImageURL": "https://cdn.shopify.com/s/files/1/0018/8327/5325/products/extra-large-fruit-basket-17808120902_1024x1024_65bf56f6-2c03-499c-99a7-abc237641f14_1024x1024.jpg?v=1528874366"
+  },
+  {
+    "CategoryId": 3,
+    "CategoryName": "Dairy",
+    "Description": "This is for dairy",
+    "ImageURL": "https://cdn.shopify.com/s/files/1/0018/8327/5325/products/extra-large-fruit-basket-17808120902_1024x1024_65bf56f6-2c03-499c-99a7-abc237641f14_1024x1024.jpg?v=1528874366"
+  },
+  {
+    "CategoryId": 4,
+    "CategoryName": "Meat",
+    "Description": "This is for meat",
+    "ImageURL": "https://cdn.shopify.com/s/files/1/0018/8327/5325/products/extra-large-fruit-basket-17808120902_1024x1024_65bf56f6-2c03-499c-99a7-abc237641f14_1024x1024.jpg?v=1528874366"
+  },
+  {
+    "CategoryId": 5,
+    "CategoryName": "Grains",
+    "Description": "This is for grains",
+    "ImageURL": "https://cdn.shopify.com/s/files/1/0018/8327/5325/products/extra-large-fruit-basket-17808120902_1024x1024_65bf56f6-2c03-499c-99a7-abc237641f14_1024x1024.jpg?v=1528874366"
+  },
+  {
+    "CategoryId": 6,
+    "CategoryName": "Oils, Fats & Sweets",
+    "Description": "This is for oils, fats & sweets",
+    "ImageURL": "https://cdn.shopify.com/s/files/1/0018/8327/5325/products/extra-large-fruit-basket-17808120902_1024x1024_65bf56f6-2c03-499c-99a7-abc237641f14_1024x1024.jpg?v=1528874366"
+  }
+]
