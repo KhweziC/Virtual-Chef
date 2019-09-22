@@ -12,9 +12,14 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
 <<<<<<< HEAD
+
+  
+=======
+<<<<<<< HEAD
   
 =======
 >>>>>>> 195efd9fbe0dae3e38a143e62060db6913aa8e5e
+>>>>>>> 754bb8802de9469675886fcf9e278f4c3180872a
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'favourite', loadChildren: './favourite/favourite.module#FavouritePageModule' },
   { path: 'settings', loadChildren: './settings/settings.module#SettingsPageModule' },
