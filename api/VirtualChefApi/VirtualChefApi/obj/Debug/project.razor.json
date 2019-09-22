@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "FilePath": "c:\\Users\\Theatre\\Virtual-Chef\\api\\VirtualChefApi\\VirtualChefApi\\VirtualChefApi.csproj",
+=======
+  "FilePath": "c:\\Users\\Tshepo Eric\\Documents\\GitHub\\Virtual-Chef\\api\\VirtualChefApi\\VirtualChefApi\\VirtualChefApi.csproj",
+>>>>>>> c70199d9e632dfada513c7eac66f1f0e466ffeba
   "Configuration": {
     "ConfigurationName": "UnsupportedRazor",
     "LanguageVersion": "1.0",

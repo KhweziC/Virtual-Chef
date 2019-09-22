@@ -20,10 +20,11 @@ CREATE TABLE [dbo].[Recipes]
  [ReadyIn]    time(7) NOT NULL ,
  [Author]     varchar(50) NOT NULL ,
  [CreateDate] datetime NOT NULL ,
- [CountyId]   nvarchar(50) NOT NULL ,
+ [CountryId]   nvarchar(3) NOT NULL ,
 
 
- CONSTRAINT [PK_Recipes] PRIMARY KEY CLUSTERED ([RecipeId] ASC)
+ CONSTRAINT [PK_Recipes] PRIMARY KEY CLUSTERED ([RecipeId] ASC),
+ CONSTRAINT [FK_To_Country] FOREIGN KEY ([CountryId])  REFERENCES [dbo].[Countries]([CountryId]),
 );
 GO
 
@@ -45,17 +46,22 @@ CREATE TABLE [dbo].[Menu]
  [MenuName]    nvarchar(50) NOT NULL ,
  [Description] nvarchar(250) NULL ,
  [ImagerUrl]   nvarchar(250) NOT NULL ,
- [RecipeId]    int NOT NULL ,
+ [DietId]    int NOT NULL ,
+ [RestaurantId]   int  NOT NULL ,
 
 
- CONSTRAINT [PK_Menu] PRIMARY KEY CLUSTERED ([MenuId] ASC)
+ CONSTRAINT [PK_Menu] PRIMARY KEY CLUSTERED ([MenuId] ASC),
+ CONSTRAINT [FK_To_Diet] FOREIGN KEY ([DietId])  REFERENCES [dbo].[Diet]([DietId]),
+ CONSTRAINT [FK_Menu_To_Restaurants] FOREIGN KEY ([RestaurantId])  REFERENCES [dbo].[Restaurants]([RestaurantId])
+
+
 );
 GO
 
 
 CREATE NONCLUSTERED INDEX [fkIdx_RecipeId] ON [dbo].[Menu] 
  (
-  [RecipeId] ASC
+  [DietId] ASC
  )
 
 GO
