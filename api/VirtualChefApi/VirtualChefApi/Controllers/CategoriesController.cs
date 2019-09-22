@@ -33,7 +33,10 @@ namespace VirtualChefApi.Controllers
         // GET api/categories
         public IEnumerable<Categories> Get()
         {
-            return list;
+
+            var ctx = new VirtualChefContext();
+            var categories = (from cat in ctx.Categories select cat).ToList();
+            return Categories;
         }
         // GET api/categories/123477
         public Categories Get(int id)

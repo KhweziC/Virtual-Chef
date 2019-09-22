@@ -31,7 +31,10 @@ namespace VirtualChefApi.Controllers
         // GET api/Recipe
         public IEnumerable<Recipe> Get()
         {
-            return list;
+            var ctx = new VirtualChefContext();
+            var recipes = (from cat in ctx.recipes select cat).ToList();
+
+            return recipes;
         }
         // GET api/Recipe/15343
         public Recipe Get(int id)
