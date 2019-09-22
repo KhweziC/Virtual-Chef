@@ -11,6 +11,10 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
+<<<<<<< HEAD
+  
+=======
+>>>>>>> 195efd9fbe0dae3e38a143e62060db6913aa8e5e
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'favourite', loadChildren: './favourite/favourite.module#FavouritePageModule' },
   { path: 'settings', loadChildren: './settings/settings.module#SettingsPageModule' },
