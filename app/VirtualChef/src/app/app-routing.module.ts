@@ -11,13 +11,13 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
-  {
-    path: 'list',
-    loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
-  },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'favourite', loadChildren: './favourite/favourite.module#FavouritePageModule' },
-  { path: 'settings', loadChildren: './settings/settings.module#SettingsPageModule' }
+  { path: 'settings', loadChildren: './settings/settings.module#SettingsPageModule' },
+  { path: 'ingredients', loadChildren: './ingredients/ingredients.module#IngredientsPageModule' },
+  { path: 'recipes', loadChildren: './recipes/recipes.module#RecipesPageModule' }
+
+
 ];
 
 @NgModule({
