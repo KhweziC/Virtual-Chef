@@ -1,5 +1,7 @@
 {
   "name": "VirtualChief",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
