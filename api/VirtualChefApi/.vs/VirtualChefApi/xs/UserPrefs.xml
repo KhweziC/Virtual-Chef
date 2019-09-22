@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{21A17393-B649-415D-93B3-5AC8B6094173}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="VirtualChefApi/App_Start/WebApiConfig.cs">
+    <Files>
+      <File FileName="VirtualChefApi/Controllers/CategoriesController.cs" Line="1" Column="1" />
+      <File FileName="VirtualChefApi/App_Start/WebApiConfig.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="VirtualChefApi" expanded="True">
+            <Node name="VirtualChefApi" expanded="True">
+              <Node name="App_Start" expanded="True">
+                <Node name="WebApiConfig.cs" selected="True" />
+              </Node>
+              <Node name="Controllers" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.VirtualChefApi PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
