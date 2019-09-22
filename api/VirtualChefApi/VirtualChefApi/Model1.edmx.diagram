@@ -4,14 +4,23 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d40ba8d280a84803ae8e6a1e6089b14f" Name="Diagram1" ZoomLevel="82">
-        <EntityTypeShape EntityType="DatabaseFirst.VirtualChefModel.Category" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseFirst.VirtualChefModel.Country" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseFirst.VirtualChefModel.Ingredient" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseFirst.VirtualChefModel.Menu" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseFirst.VirtualChefModel.Restaurant" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+      <Diagram DiagramId="9c75471c795e49d8b9601ecef4aa7b3e" Name="Diagram1">
+        <EntityTypeShape EntityType="DatabaseFirst.VirtualChefModel.Category" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseFirst.VirtualChefModel.Cook" Width="1.5" PointX="7.5" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseFirst.VirtualChefModel.Country" Width="1.5" PointX="3" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseFirst.VirtualChefModel.Diet" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseFirst.VirtualChefModel.Ingredient" Width="1.5" PointX="5.25" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseFirst.VirtualChefModel.Menu" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseFirst.VirtualChefModel.Recipe" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseFirst.VirtualChefModel.Restaurant" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseFirst.VirtualChefModel.sysdiagram" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
         <AssociationConnector Association="DatabaseFirst.VirtualChefModel.FK_Categories_To_Ingredients" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseFirst.VirtualChefModel.FK_Ingredients_To_Cook" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseFirst.VirtualChefModel.FK_Recipe" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseFirst.VirtualChefModel.FK_To_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseFirst.VirtualChefModel.FK_To_Diet" ManuallyRouted="false" />
         <AssociationConnector Association="DatabaseFirst.VirtualChefModel.FK_Menu_To_Restaurants" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseFirst.VirtualChefModel.MenuRecipes" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

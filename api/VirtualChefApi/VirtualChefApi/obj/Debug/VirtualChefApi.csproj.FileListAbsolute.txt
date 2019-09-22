@@ -170,3 +170,7 @@ C:\Users\Tshepo Eric\Documents\GitHub\Virtual-Chef\api\VirtualChefApi\VirtualChe
 C:\Users\Tshepo Eric\Documents\GitHub\Virtual-Chef\api\VirtualChefApi\VirtualChefApi\bin\EntityFramework.SqlServer.dll
 C:\Users\Tshepo Eric\Documents\GitHub\Virtual-Chef\api\VirtualChefApi\VirtualChefApi\bin\EntityFramework.xml
 C:\Users\Tshepo Eric\Documents\GitHub\Virtual-Chef\api\VirtualChefApi\VirtualChefApi\bin\EntityFramework.SqlServer.xml
+C:\Users\13492\Documents\GitHub\Virtual-Chef\api\VirtualChefApi\VirtualChefApi\obj\Debug\VirtualChefApi.csprojAssemblyReference.cache
+C:\Users\13492\Documents\GitHub\Virtual-Chef\api\VirtualChefApi\VirtualChefApi\obj\Debug\VirtualChefApi.csproj.CoreCompileInputs.cache
+C:\Users\13492\Documents\GitHub\Virtual-Chef\api\VirtualChefApi\VirtualChefApi\obj\Debug\VirtualChefApi.dll
+C:\Users\13492\Documents\GitHub\Virtual-Chef\api\VirtualChefApi\VirtualChefApi\obj\Debug\VirtualChefApi.pdb
